@@ -180,6 +180,13 @@ const MainNavArea = styled.div`
   gap: 32px;
   padding: 32px 0 48px;
   text-align: center;
+
+  @media ${QUERIES.tabletAndUp} {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    flex-direction: revert;
+    text-align: left;
+  }
 `;
 
 const MainNavHeading = styled.h2`
@@ -208,7 +215,7 @@ const Subfooter = styled.div`
   align-items: center;
 
   @media ${QUERIES.laptopAndUp} {
-    align-items: start;
+    align-items: flex-start;
   }
 `;
 
